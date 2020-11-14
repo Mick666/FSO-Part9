@@ -20,7 +20,7 @@ const calculateBmi = (height: number, kg: number) => {
     }
 
     return `Error encountered, BMI Result: ${bmiResult}`;
-}
+};
 
 const checkCalculatorArguments = (args: Array<string> ): calculatorInput => {
     if (args.length < 2) throw new Error('Not enough arguments');
@@ -30,10 +30,11 @@ const checkCalculatorArguments = (args: Array<string> ): calculatorInput => {
         return {
             height: Number(args[0]),
             kg: Number(args[1])
-          }
+          };
     }
 
-}
+    throw new Error('Provided values were not numbers!');
+};
 
 try {    
     const { height, kg } = checkCalculatorArguments(process.argv.slice(2));
@@ -74,8 +75,8 @@ const calculateExercises = (days: Array<number>, target: number): ExerciseCalcul
         ratingDescription: ratingDesc,
         target: target,
         average: days.reduce((total, sum) => total + sum) / days.length
-    }
-}
+    };
+};
 
 const verifyArguments = (args: Array<string> ): exerciseInput => {
     if (args.length < 1) throw new Error('Not enough arguments');
@@ -90,9 +91,9 @@ const verifyArguments = (args: Array<string> ): exerciseInput => {
     return {
         days: days,
         target: Number(target)
-    }
+    };
 
-}
+};
 
 try {    
     const { days, target } = verifyArguments(process.argv.slice(2));

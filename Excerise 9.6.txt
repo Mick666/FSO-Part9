@@ -1,0 +1,3 @@
+Unsure how best to demonstrate completing 9.6;
+
+This github repo should pass without eslint warnings, but the source repo (https://github.com/Mick666/FSOPart9-Typescript) definitely will.

@@ -23,8 +23,8 @@ const calculateExercises = (days: Array<number>, target: number): ExerciseCalcul
         ratingDescription: ratingDesc,
         target: target,
         average: days.reduce((total, sum) => total + sum) / days.length
-    }
-}
+    };
+};
 
 console.log(calculateExercises([3, 0, 2, 4.5, 0, 3, 1], 2));
 console.log(calculateExercises([0, 0, 0, 0, 0, 0, 0], 2));
