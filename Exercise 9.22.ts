@@ -48,6 +48,7 @@ const HospitalEntryTable: React.FC<{ entry: HospitalEntry }> = ({ entry }) => {
       <div style={{display: "flex"}}><h3 style={{paddingRight: "5px"}}>{entry.date}</h3> <Icon name='doctor' size="large"/></div>
       Doctor: {entry.specialist} <br />
       <i>{entry.description}</i> <br />
+      <i>{`Discharged: ${entry.discharge.date}, ${entry.discharge.criteria}`}</i> <br />
       <ul>
         {entry.diagnosisCodes?.map(code => {
           return (
